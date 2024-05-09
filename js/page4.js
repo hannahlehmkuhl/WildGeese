@@ -34,7 +34,7 @@ function draw() {
 
   image(baby,width-width/1.5,height/1.5,width/5,width/6);
 
-  mappedtextposition = map(mouseY-height/20,0, height,height,0);
+  mappedtextposition = map(mouseX-height/20,0, height,height,0);
   textFont(nyght);
   fill(interpolatedcolor2);
   textSize(width/15);
@@ -43,7 +43,7 @@ function draw() {
   text('despair, yours,',width/9,mappedtextposition+height/10);
    
   textAlign(RIGHT);
-  text('and I will',width-width/8,mouseY);
-  text('tell you mine',width-width/8,mouseY+height/10);
+  text('and I will',width-width/8,mouseX);
+  text('tell you mine',width-width/8,mouseX+height/10);
   
 }
