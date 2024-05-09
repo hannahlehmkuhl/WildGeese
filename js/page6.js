@@ -3,6 +3,7 @@ function preload(){
   nyght = loadFont('font/NyghtSerif-RegularItalic.ttf');
   gooseUP = loadImage('img/sleekgeeseUP-10.png');
   baby = loadImage('img/bambino-12.png');
+  baby2 = loadImage('img/bambino2-12.png');
   river = loadImage('img/river-15.png');
   mountain = loadImage('img/mountain-16.png');
 }
@@ -34,17 +35,21 @@ function draw() {
   image(river,0-width/4,0-height/3,width,height);
   image(mountain,width/8,height-height/1.5,width,height);
   image(baby,width/2.5,height/20,width/15,height/12);
+  image(baby2,width/5,height/10,width/15,height/12);
   image(baby,width/3,height/25,width/15,height/12);
-  image(gooseUP,width/3.5,height/50,width/10,height/6);
+  image(gooseUP,width/4,height/50,width/10,height/5.5);
   noStroke();
   
   textFont(nyght);
   fill(w);
-  textSize(width/25);
-  textAlign(CENTER);
-  text('Meanwhile the sun and the clear pebbles of the rain are',width/2,height/3);
-  text('moving across the landscapes, over the prairies and',width/2,height/2.4);
-  text('the deep trees, the mountains and the rivers.',width/2,height/2);
+  textSize(width/18);
+  textAlign(LEFT);
+  text('Meanwhile the sun and the',width/22,height/3);
+  text ('clear pebbles of the rain are',width/22,height/2.3);
+  text('moving across the landscapes,',mouseX,height/1.6);
+  textAlign(RIGHT);
+  text('over the prairies and the deep trees,',width-width/22,height-height/6);
+  text ('the mountains and the rivers.',width-width/22,height-height/20);
 
   
 }

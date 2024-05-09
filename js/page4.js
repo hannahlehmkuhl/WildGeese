@@ -1,7 +1,8 @@
 function preload(){
   nyght = loadFont('font/NyghtSerif-RegularItalic.ttf');
-  
-  speech = loadImage('img/speech-14.png');
+  gooseUP = loadImage('img/sleekgeeseUP-10.png');
+  baby = loadImage('img/bambino2-12.png');
+  river = loadImage('img/river-15.png');
 }
   function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -26,7 +27,13 @@ function draw() {
   
 
   background(interpolatedcolor);
-  image(speech,0-width/64,0,width+width/32,height);
+
+  image(river,0-width/3,height/8,2*width,1.25*height);
+
+  image(gooseUP,width-width/4,height/4,width/5,width/4);
+
+  image(baby,width-width/1.5,height/1.5,width/5,width/6);
+
   mappedtextposition = map(mouseY-height/20,0, height,height,0);
   textFont(nyght);
   fill(interpolatedcolor2);

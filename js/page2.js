@@ -1,6 +1,7 @@
 function preload(){
   
   nyght = loadFont('font/NyghtSerif-RegularItalic.ttf');
+  cattail = loadImage('img/cattail-18.png');
   
   }
 function setup() {
@@ -20,13 +21,13 @@ function draw() {
   
   
 
-  interpolatedcolor = lerpColor(b,g,mouseX/width/.5);
+  interpolatedcolor = lerpColor(b,y,mouseX/width/.5);
   
-  interpolatedcolor2 = lerpColor(b,y,mouseX/width/.5);
+  interpolatedcolor2 = lerpColor(y,p,mouseX/width/.5);
   
-   interpolatedcolor3 = lerpColor(b,w,mouseX/width/.5);
+   interpolatedcolor3 = lerpColor(r,w,mouseX/width/.5);
    
-  interpolatedcolor4 = lerpColor(b,b,mouseX/width/.5);
+  interpolatedcolor4 = lerpColor(p,b,mouseX/width/.5);
   
   b.setAlpha(178);
   background(interpolatedcolor);
@@ -36,13 +37,13 @@ function draw() {
  fill(interpolatedcolor3);
   textSize(width/20);
   textFont(nyght);
+  image(cattail, width/8,height/2.5,width/3,width/3);
   text("for a hundred miles through the desert",mouseX, height/2, width/3, width/4);   
   fill(interpolatedcolor2);
-
   text("You do not have to walk on your knees", mouseX/1.5, height/5, width/3, width/3);   
   fill(interpolatedcolor4);
   textFont(nyght)
   textSize(width/8);
   text("repenting", mouseX*1.15, height-height/10, width/2, width/2); 
-
+  
 }

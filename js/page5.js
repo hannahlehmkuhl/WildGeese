@@ -7,7 +7,6 @@ let x;
 function preload() {
   nyght = loadFont('font/NyghtSerif-RegularItalic.ttf');
   geese = loadImage('img/flyingeese!-11.png');
-  moon = loadImage('img/moon-17.png');
   
 }
 function setup() {
@@ -40,7 +39,6 @@ function draw() {
   interpolatedcolor3 = lerpColor(r, y, mouseX / width / .5);
   
   mappedcircleposition = map(mouseX,0, width,1.25*height,height/10);
-  mappedmoonposition = map(mouseX,0, width,0-width/8,1.25*height);
   
   background(interpolatedcolor);
   
@@ -60,7 +58,6 @@ function draw() {
   if (x < -phraseWidth) {
     x = width;
   }
-image(moon,width-width/4,mappedmoonposition,width/6,width/5);
   image(geese,width/2,height/2,width/4,width/5);
 }
 

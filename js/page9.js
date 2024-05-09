@@ -2,7 +2,7 @@ let mama;
 var squareState = false;
 var squareState2 = false;
 var squareState3 = false;
-var words = ['Whoever you are', 'no matter how lonely','the world offers itself', 'to your imagination.'];
+var words = ['Calls to you like wild geese -', 'harsh and exciting'];
 var wordIndex = 0;
 
 function preload() {
@@ -13,11 +13,12 @@ function preload() {
   baby = loadImage('img/bambino-12.png');
   baby2 = loadImage('img/bambino2-12.png');
   cattail =loadImage('img/cattail-18.png');
+  mama = loadImage('img/mama-13.png');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  rectMode(LEFT);
+  rectMode(CENTER);
 }
 
 function draw() {
@@ -35,56 +36,48 @@ function draw() {
 
   colorMode(RGB);
   noStroke();  
-
-  
-  background(p);
-  
-  
-  image(baby,width/2,height/4,width/4,width/5); 
-  fill(b);
-  rect(0,height/1.9,width,height/2);
+  background(y);
+  image(mama,width/2.25,height/8,width/1.5,width/2);
   textAlign(CENTER);
   textFont(nyght);
-  fill(r);
-  textSize(width/20);
+  fill(w);
+  textSize(width/15);
   
-  
-  text(words[wordIndex], width/2, height/8);
+  text(words[wordIndex], mouseX, mouseY);
   
   if (squareState == true) {
-    image(cattail,width - width / 3.5, height - height / 3, width / 4.5, height/4);
+    image(baby2,width - width / 3.5, height - height / 3, width / 3.5, height/3.5);
   }
 
   if (squareState2 == true) {
-    image(cattail, width/20, height - height / 2.5, width / 4.5, height/4);
+    image(baby2, width / 2.75, height - height / 2.5, width / 3.5, height/3.5);
   }
   
   if (squareState3 == true) {
-    image(cattail,width / 3, height / 2.8, width / 4.5, height/4);
+    image(baby2,width / 10, height / 4, width / 3.5, height/3.5);
   }
-  
 }
 
-function mousePressed() {if (squareState == false && mouseX > width / 2 && mouseY > height / 2) {
-  squareState = true;
+function mousePressed() {if (squareState == false && mouseX >width/10) {
+  squareState = false;
   wordIndex += 1;
-  if (wordIndex > 3) {
+  if (wordIndex > 2) {
     wordIndex = 0;
   }
 }
 
-if (squareState2 == false && mouseX < width / 2 && mouseY > height / 2) {
+if (squareState2 == false && mouseX > width/10) {
   squareState2 = true;
   wordIndex += 1;
-  if (wordIndex > 3) {
+  if (wordIndex > 2) {
     wordIndex = 0;
   }
 }
 
-if (squareState3 == false && mouseY < height / 2) {
-  squareState3 = true;
+if (squareState3 == false && mouseX >width/10) {
+  squareState3 = false;
   wordIndex += 1;
-  if (wordIndex > 3) {
+  if (wordIndex > 2) {
     wordIndex = 0;
   }
   }
