@@ -21,9 +21,9 @@ function draw() {
   
   
 
-  interpolatedcolor = lerpColor(g,d,mouseY/height/.5);
+  interpolatedcolor = lerpColor(g,d,mouseX/height/.5);
   
-  interpolatedcolor2 = lerpColor(y,r,mouseY/width/.5);
+  interpolatedcolor2 = lerpColor(y,r,mouseX/width/.5);
   
 
   background(interpolatedcolor);

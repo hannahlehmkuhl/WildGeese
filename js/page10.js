@@ -26,7 +26,8 @@ function draw() {
   let p = color(244,210,210);
   c.setAlpha(178);
   interpolatedcolor = lerpColor(g,b,mouseX/height/.5);
-  
+
+  noStroke();
   interpolatedcolor2 = lerpColor(y,r,mouseY/width/.5);
   background(interpolatedcolor2);  
   textFont(nyght);
@@ -49,7 +50,6 @@ function draw() {
   text('in the family of things.',width/2,mappedtextposition);
  
 
-  noStroke();
 
 
   
