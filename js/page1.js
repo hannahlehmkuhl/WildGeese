@@ -36,7 +36,12 @@ function draw() {
   noStroke();
  
    if (mouseX > 150 && mouseIsPressed) {
-  image(gooseDOWN,width/2,height-height/1.65,width/4,height/2);
+  image(gooseDOWN,width/2,height-height/1.85,width/4,height/2.3);
+  textFont(belle);
+  textSize(width/50);
+  fill(w);
+  textAlign(CENTER);
+  text("Dedicated to my Mama, Happy Mother's Day <3",width/2,height/2)
     } else {
    
      image(gooseUP,width/2,height-height/1.65,width/4,height/2);
